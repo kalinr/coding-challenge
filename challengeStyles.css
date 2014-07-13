@@ -1,0 +1,32 @@
+/*makes the header and footer stretch to edge of page*/
+html, body {
+  margin:0px;
+}
+
+#page_header, #page_footer{
+  min-height:22px;
+  background-color: #22708A;
+  color: #FFFFFF;
+  padding: 10px;
+}
+
+#page_footer{
+	position:fixed;
+  bottom: 0;
+  width: 100%;
+  z-index:-1;
+}
+
+#item_container{
+	margin: 20px 50px;
+  background-color: #cccccc;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: #aaaaaa;
+  padding-left: 10px;
+}
+
+.item_header{
+  font-weight:bold;
+}
