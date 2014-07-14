@@ -27,8 +27,9 @@
   <script src="jquery.challenge.js"></script>
   <script>
     $(document).ready( function() {
-    	var aNames = ['Gabriel Ba', 'John Adams', 'Kieth Richards', 'Prince', 'John Adams McKensie'];
-    	$.fn.challenge.sortAndAddItems(aNames, "sorted_names");
+    	var aNames = ['Gabriel Ba', 'John Adams', 'Kieth Richards', 'Prince', 'John Adams McKensie'];    	
+    	aNames = $.fn.challenge.sortItems(aNames);
+      $.fn.challenge.showItems(aNames, "sorted_names");
     });
   </script>
 </body>
