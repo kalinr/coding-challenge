@@ -33,6 +33,7 @@
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="jquery.challenge.js"></script>
   <script>
+    //normally this would be in an external file, compiled with jQuery and the plugin and minified
     $(document).ready( function() {
     	//challenge 2:
     	var aNames = ['Gabriel Ba', 'John Adams', 'Kieth Richards', 'Prince', 'John Adams McKensie'];    	
@@ -59,7 +60,6 @@
       //challenge 7:      
       $( "#contact_form" ).submit(function( event ) {
     	  event.preventDefault();
-    	  
     	  var sPhoneNumber = $.fn.challenge.validatePhone( $( "#txtPhone" ).val() ),
     	    sResult = "";
     	  
@@ -72,7 +72,6 @@
     		  $("#phone_result").text(sResult);
     		  throw sResult;
     	  }
-    	 
     	});
       
     });

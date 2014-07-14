@@ -120,7 +120,15 @@
      * @return {Boolean}
      */
     $.fn.challenge.validatePhone = function(sPhoneNumber){
-      console.log("validating the nubmer!!" + sPhoneNumber);
+      //begin string, match "0-9" 7-12 times, end string
+      var rgxValidate = new RegExp("^[0-9]{7,12}$");
+      
+      //get rid of all -, + and spaces, since those are valid characters
+      sPhoneNumber = sPhoneNumber.replace(new RegExp("[\- | \  | \+]", "g"), "");      
+      
+      if(rgxValidate.test(sPhoneNumber)){
+    	return sPhoneNumber;
+      }      
       return false;
     };
     
