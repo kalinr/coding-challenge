@@ -30,7 +30,7 @@
     /**
      * display a list of strings in a UL
      * @param {Array} aItems array of srtings
-     * @param {jQuery element} the jquery UL element that will contain the list items
+     * @param {jQuery element} element the jquery UL element that will contain the list items
      * @return {null}
      */
     $.fn.challenge.showItems = function( aItems, element ) {
@@ -42,7 +42,7 @@
     
     /**
      * enable strikethrough functionality for jQuery elements
-     * @param {jQuery element} the item or list items that need strikethrough functionality
+     * @param {jQuery element} element the item or list items that need strikethrough functionality
      * @return {null}
      */
     $.fn.challenge.enableStrike = function ( element ) {
@@ -77,7 +77,7 @@
     
     /**
      * loops through an array of numbers to find the highest
-     * @param {Array} array of numbers or nested arrays of numbers
+     * @param {Array} aNumbers array of numbers or nested arrays of numbers
      * @return {Number}
      */
     $.fn.challenge.getMaxInArray = function(aNumbers){
@@ -112,6 +112,16 @@
         return a.length > b.length ? a : b; 
       });
       return sLongest.length;
+    };
+    
+    /**
+     * validate a phone number
+     * @param {String} the phone number to be validated
+     * @return {Boolean}
+     */
+    $.fn.challenge.validatePhone = function(sPhoneNumber){
+      console.log("validating the nubmer!!" + sPhoneNumber);
+      return false;
     };
     
     return this;
