@@ -32,6 +32,9 @@
       $.fn.challenge.showItems( aNames, $("#sorted_names") );//challenge 2
       $.fn.challenge.enableStrike( $("#sorted_names li") );//challenge 3
       $.fn.challenge.countdown(5);//challenge 4
+      var aNumbers = [[141,151,161], 2, 3, [101, 202, [303, 404]]];
+      var nHighest = $.fn.challenge.getMaxInArray(aNumbers);
+      console.log("Challenge 5 output: " + nHighest);
     });
   </script>
 </body>

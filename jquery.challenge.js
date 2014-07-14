@@ -75,6 +75,33 @@
       }
     };
     
+    /**
+     * loops through an array of numbers to find the highest
+     * @param {Array} array of numbers or nested arrays of numbers
+     * @return {Number}
+     */
+    $.fn.challenge.getMaxInArray = function(aNumbers){
+      var l = aNumbers.length;
+      var nHighest = 0;
+      var nCheck = 0;
+      for(var i=0; i<l; i++){
+    	if(!isNaN(aNumbers[i])){
+    	  nCheck = aNumbers[i];    		  
+    	}else{
+          if($.isArray(aNumbers[i])){
+            //if it's an array, recursively call the same function until we get an answer
+            nCheck = $.fn.challenge.getMaxInArray( aNumbers[i] );
+          }
+          //everything not a number or array gets ignored
+    	}
+    	
+    	if(nCheck > nHighest){
+    	 nHighest = nCheck;
+    	}
+      }
+      return nHighest;
+    };
+    
     return this;
   }
 }($));
