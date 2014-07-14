@@ -30,3 +30,11 @@ html, body {
 .item_header{
   font-weight:bold;
 }
+
+.name_item{
+  cursor:pointer;
+}
+
+.name_item_strike{
+  text-decoration:line-through;
+}
