@@ -29,8 +29,9 @@
     $(document).ready( function() {
     	var aNames = ['Gabriel Ba', 'John Adams', 'Kieth Richards', 'Prince', 'John Adams McKensie'];    	
       aNames = $.fn.challenge.sortItems( aNames );
-      $.fn.challenge.showItems( aNames, $("#sorted_names") );
-      $.fn.challenge.enableStrike( $("#sorted_names li") );
+      $.fn.challenge.showItems( aNames, $("#sorted_names") );//challenge 2
+      $.fn.challenge.enableStrike( $("#sorted_names li") );//challenge 3
+      $.fn.challenge.countdown(5);//challenge 4
     });
   </script>
 </body>

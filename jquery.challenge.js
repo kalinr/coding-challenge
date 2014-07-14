@@ -41,7 +41,7 @@
     };
     
     /**
-     * enable strikethrough functionality for jquery elements
+     * enable strikethrough functionality for jQuery elements
      * @param {jQuery element} the item or list items that need strikethrough functionality
      * @return {null}
      */
@@ -51,7 +51,29 @@
           $(this).toggleClass("name_item_strike");
         });
       });
-    }
+    };
+    
+    /**
+     * countdown logs a countdown from num to 0, 
+     * showing the step number before the value
+     * with a 1 second delay between each log
+     * ... or does it? Why?
+     * (fixed)
+     * @param num The starting number
+     */
+    $.fn.challenge.countdown = function(num ) {
+
+      //doSetTimeout ensures a distinct copy of "i" is present for each timeout function
+      function doSetTimeout(i) {        
+        setTimeout(function () {
+          console.log((i+1) + ': ' + (num - i));
+        }, i * 1000);
+      }
+
+      for (var i = 0; i <= num; i++) {
+        doSetTimeout(i);
+      }
+    };
     
     return this;
   }
