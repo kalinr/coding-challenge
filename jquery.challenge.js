@@ -102,6 +102,18 @@
       return nHighest;
     };
     
+    /**
+     * return the longest string in an array of strings
+     * @param {Array} array of strings
+     * @return {String}
+     */
+    $.fn.challenge.getLongestStringInArray = function(aStrings){
+      sLongest = aStrings.reduce(function (a, b) {
+        return a.length > b.length ? a : b; 
+      });
+      return sLongest.length;
+    };
+    
     return this;
   }
 }($));

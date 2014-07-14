@@ -14,12 +14,10 @@
       <p>
         <span class="item_header">Challenge 1</span><br>
         Please View Source
-      </p>
       <p>
         <span class="item_header">Challenge 2</span><br>
         <UL id="sorted_names">
         </UL>
-      </p>
     </div>
   <div id="page_footer">&copy; 2012 The Walt Disney Disney Company</div>
   
@@ -32,9 +30,14 @@
       $.fn.challenge.showItems( aNames, $("#sorted_names") );//challenge 2
       $.fn.challenge.enableStrike( $("#sorted_names li") );//challenge 3
       $.fn.challenge.countdown(5);//challenge 4
+
       var aNumbers = [[141,151,161], 2, 3, [101, 202, [303, 404]]];
       var nHighest = $.fn.challenge.getMaxInArray(aNumbers);
-      console.log("Challenge 5 output: " + nHighest);
+      console.log("Challenge 5 output: " + nHighest);//challenge 5
+
+      var aStrings = ["a", "bcd", "efgh", "ij", ""];
+      var sLongest = $.fn.challenge.getLongestStringInArray(aStrings);
+      console.log("Challenge 6 output: " + sLongest);//challenge 6
     });
   </script>
 </body>
