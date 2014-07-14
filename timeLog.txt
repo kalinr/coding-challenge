@@ -1,0 +1,2 @@
+07-11-2014: 30 min - read through coding challenges pdf
+07-12-2014: 2 hr   - set up github repo and completed challenge 1
