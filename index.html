@@ -32,9 +32,11 @@
     <div class="content_item">
       <span class="item_header">Challenge 8</span>
       <form id="card_form" name="card_form" action="">
-        <input type="submit" name="btnShuffle" id="btnShuffle" value="Shuffle" />
-        <input type="submit" name="btnDraw" id="btnDraw" value="Draw" />
-        <input type="submit" name="btnRepack" id="btnRepack" value="Repack" />
+        <input type="submit" name="btnShuffle" id="btnShuffle" value="Shuffle" /> | 
+        <input type="number" name="numDraw" id="numDraw" min=1 value=1 />
+        <input type="submit" name="btnDraw" id="btnDraw" value="Draw" /> | 
+        <input type="submit" name="btnRepack" id="btnRepack" value="Repack" /> |
+        <input type="number" name="numDiscard" id="numDiscard" min=1 value=1 />
         <input type="submit" name="btnDiscard" id="btnDiscard" value="Discard" />
         <span id="phone_result"></span>
       </form>

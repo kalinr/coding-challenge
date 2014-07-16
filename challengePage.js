@@ -38,29 +38,45 @@
 	  }
 	});
   
-  //challenge 8:      
+  //challenge 8:
+  //TODO: look into combining these four listeners into a single function
   $( "#btnShuffle" ).click(function( event ) {
     event.preventDefault();
-
-    $.post( "http://localhost/cardGame.php", "shuffle", function( data ) {
+    var oPostData = {"func":"shuffle"};
+    $.post( "http://localhost/cardGame.php", oPostData, function( data ) {
       console.log("result: " + data);
     });
 
   });
   
   $( "#btnDraw" ).click(function( event ) {
-    event.preventDefault();
-    console.log("draw the cards");
+    event.preventDefault();    
+    var oPostData = {"func":"draw", "count":$( "#numDraw" ).val()};
+    $.post( "http://localhost/cardGame.php", oPostData, function( data ) {
+      console.log("result: " + data);
+    });
   });
   
   $( "#btnRepack" ).click(function( event ) {
     event.preventDefault();
-    console.log("repack the cards");
+    var oPostData = {"func":"repack"};
+    $.post( "http://localhost/cardGame.php", oPostData, function( data ) {
+      console.log("result: " + data);
+    });
+    
   });
   
   $( "#btnDiscard" ).click(function( event ) {
     event.preventDefault();
     console.log("discard the cards");
+    
+    
+    var oPostData = {"func":"discard", "count":$( "#numDiscard" ).val()};
+    
+    $.post( "http://localhost/cardGame.php", oPostData, function( data ) {
+      console.log("result: " + data);
+    });
+    
   });
   
 });
