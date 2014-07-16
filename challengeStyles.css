@@ -43,7 +43,7 @@ html, body {
 }
 
 /*---------------  begin challenge 7  --------------*/
-#contact_form {
+.content_item {
   margin: 6px;
 }
 
