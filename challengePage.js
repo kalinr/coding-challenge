@@ -1,12 +1,12 @@
  $(document).ready( function() {
   //challenge 2:
-  var aNames = ['Gabriel Ba', 'John Adams', 'Kieth Richards', 'Prince', 'John Adams McKensie'];    	
+  var aNames = ['Gabriel Ba', 'John Adams', 'Kieth Richards', 'Prince', 'John Adams McKensie'];      
   aNames = $.fn.challenge.sortItems( aNames );
   $.fn.challenge.showItems( aNames, $("#sorted_names") );
   
   //challenge 3:
   $.fn.challenge.enableStrike( $("#sorted_names li") );
-  
+    
   //challenge 4:
   $.fn.challenge.countdown(5);
   
@@ -23,20 +23,20 @@
   
   //challenge 7:      
   $( "#contact_form" ).submit(function( event ) {
-	  event.preventDefault();
-	  var sPhoneNumber = $.fn.challenge.validatePhone( $( "#txtPhone" ).val() ),
-	    sResult = "";
-	  
-	  if( sPhoneNumber ){
-		  sResult = "Your validated phone number: " + sPhoneNumber
-		  $("#phone_result").text(sResult);
-		  console.log(sResult);
-	  }else{
-		  sResult = "Invalid phone number";
-		  $("#phone_result").text(sResult);
-		  throw sResult;
-	  }
-	});
+    event.preventDefault();
+    var sPhoneNumber = $.fn.challenge.validatePhone( $( "#txtPhone" ).val() ),
+      sResult = "";
+    
+    if( sPhoneNumber ){
+      sResult = "Your validated phone number: " + sPhoneNumber
+      $("#phone_result").text(sResult);
+      console.log(sResult);
+    }else{
+      sResult = "Invalid phone number";
+      $("#phone_result").text(sResult);
+      throw sResult;
+    }
+  });
   
   //challenge 8:
   //TODO: look into combining these four listeners into a single function
