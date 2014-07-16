@@ -63,20 +63,14 @@
     $.post( "http://localhost/cardGame.php", oPostData, function( data ) {
       console.log("result: " + data);
     });
-    
   });
   
   $( "#btnDiscard" ).click(function( event ) {
-    event.preventDefault();
-    console.log("discard the cards");
-    
-    
+    event.preventDefault();    
     var oPostData = {"func":"discard", "count":$( "#numDiscard" ).val()};
-    
     $.post( "http://localhost/cardGame.php", oPostData, function( data ) {
       console.log("result: " + data);
     });
-    
   });
   
 });
