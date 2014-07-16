@@ -44,16 +44,17 @@
     event.preventDefault();
     var oPostData = {"func":"shuffle"};
     $.post( "http://localhost/cardGame.php", oPostData, function( data ) {
-      console.log("result: " + data);
+      console.log("deck length: " + data);
     });
 
   });
   
+  //TODO: show each card in its own selectable div
   $( "#btnDraw" ).click(function( event ) {
     event.preventDefault();    
     var oPostData = {"func":"draw", "count":$( "#numDraw" ).val()};
     $.post( "http://localhost/cardGame.php", oPostData, function( data ) {
-      console.log("result: " + data);
+      console.log("new cards: " + data);
     });
   });
   
@@ -65,11 +66,12 @@
     });
   });
   
+  //TODO: remove #numDiscard and instead grab a list of selected card divs and send that list, then delete those divs
   $( "#btnDiscard" ).click(function( event ) {
     event.preventDefault();    
     var oPostData = {"func":"discard", "count":$( "#numDiscard" ).val()};
     $.post( "http://localhost/cardGame.php", oPostData, function( data ) {
-      console.log("result: " + data);
+      console.log("Your remaining hand: " + data);
     });
   });
   
