@@ -33,6 +33,10 @@ html, body {
   font-weight:bold;
 }
 
+.content_item {
+  margin: 6px;
+}
+
 /*---------  begin challenge 3  ----------------*/
 .name_item {
   cursor:pointer;
@@ -43,9 +47,6 @@ html, body {
 }
 
 /*---------------  begin challenge 7  --------------*/
-.content_item {
-  margin: 6px;
-}
 
 #phone_label {
   font-weight:bold;
